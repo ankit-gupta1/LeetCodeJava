@@ -17,7 +17,7 @@ public class Solution {
                         rows[i][k] = true;
                         cols[j][k] = true;
                         tiles[i / 3][j / 3][k] = true;
-                        board[i][j] = (char) (k + 1);
+                        board[i][j] = (char) (k + '1');
                         truth = solve(board, p + 1);
 
                         if (!truth) {
@@ -47,7 +47,7 @@ public class Solution {
                 }
             }
         }
-        
+
         boolean sol = solve(board, 0);
     }
 }
